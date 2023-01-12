@@ -1,7 +1,7 @@
 {
   "name": "mongo-sandbox",
   "version": "0.1.0",
-  "bin": "./bin/cli/js",
+  "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
