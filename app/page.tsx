@@ -2,12 +2,11 @@ import clientPromise from "../lib/mongodb"
 
 async function getMovies() {
   const client = await clientPromise;
-  const db = client.db("sample_mflix");
+  const db = client.db("food");
 
   const movies = await db
-           .collection("movies")
+           .collection("recipes")
            .find({})
-           .sort({ metacritic: -1 })
            .limit(10)
            .toArray();
 
@@ -20,6 +19,7 @@ export default async function Home() {
   return (
     <div>
       {movies}
+      
     </div>
   )
 }
